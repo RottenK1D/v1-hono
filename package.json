@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema:gen": "drizzle-kit generate:sqlite --out src/db/migrations --schema src/db/schema.ts",
+    "schema:migrate": "ts-node src/db/migrate"
   },
   "dependencies": {
     "@libsql/client": "^0.4.0-pre.7",
